@@ -1,21 +1,28 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
 </head>
+
 <body style="margin: 0;">
-   <a href="./layouts.html" target="_blank"><button>Toutes les pages</button></a>
-   <a href="./diapositives.html"> <button>Mode diapositives</button></a>
-        
-    
-    <!-- <iframe style="border: 1px solid rgba(0, 0, 0, 0.1);" width="800" height="450" src="https://www.figma.com/embed?embed_host=share&url=https%3A%2F%2Fwww.figma.com%2Fproto%2FD9yA0X1zX9Tgaaz3FLuLKW%2FPlanet-espoir-finale%3Fnode-id%3D59%253A212%26scaling%3Dscale-down-width%26page-id%3D0%253A1" allowfullscreen></iframe>
-        <iframe style="border: 1px solid rgba(0, 0, 0, 0.1);" width="800" height="450" src="https://www.figma.com/embed?embed_host=share&url=https%3A%2F%2Fwww.figma.com%2Ffile%2FD9yA0X1zX9Tgaaz3FLuLKW%2FPlanet-espoir-finale" allowfullscreen></iframe> -->
+    <div class="ctn">
+        <a href="./layouts.html" target="_blank"><button>Vue d'ensemble</button></a>
+        <a href="./diapositives.html" target="_blank"> <button>Mode diapositive</button></a>
+    </div>
 </body>
 <style>
-    body{
+    .ctn {
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+        justify-content: center;
+    }
+
+    body {
         margin: 0;
         overflow: hidden;
         display: flex;
@@ -24,20 +31,15 @@
         height: 100vh;
         width: 100vw;
     }
-    button{
+
+    button {
         padding: 10px 20px;
-    color: white;
-    border-radius: 10px;
-    background: #DB306A;
-    margin: 10px;
-    cursor: pointer;
-    }
-    iframe{
-        position: absolute;
-        top: 0;
-        left: 0;
-        height: 100vh !important;
-        width: 100vw !important;
+        color: white;
+        border-radius: 10px;
+        background: #DB306A;
+        margin: 10px;
+        cursor: pointer;
     }
 </style>
+
 </html>
