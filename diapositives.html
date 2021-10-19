@@ -1,19 +1,72 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Previews</title>
 </head>
-<body style="margin: 0;">
-    <iframe style="border: 1px solid rgba(0, 0, 0, 0.1);" width="800" height="450" src="https://www.figma.com/embed?embed_host=share&url=https%3A%2F%2Fwww.figma.com%2Fproto%2FD9yA0X1zX9Tgaaz3FLuLKW%2FPlanet-espoir-finale%3Fnode-id%3D5%253A14%26scaling%3Dscale-down-width%26page-id%3D0%253A1" allowfullscreen></iframe>        <!-- <iframe style="border: 1px solid rgba(0, 0, 0, 0.1);" width="800" height="450" src="https://www.figma.com/embed?embed_host=share&url=https%3A%2F%2Fwww.figma.com%2Ffile%2FD9yA0X1zX9Tgaaz3FLuLKW%2FPlanet-espoir-finale" allowfullscreen></iframe> -->
+
+<body style="margin: 0;" oncontextmenu="return false">
+    <iframe style="border: 1px solid rgba(0, 0, 0, 0.1);" width="800" height="450"
+        src="https://www.figma.com/embed?embed_host=share&url=https%3A%2F%2Fwww.figma.com%2Fproto%2FD9yA0X1zX9Tgaaz3FLuLKW%2FPlanet-espoir-finale%3Fnode-id%3D5%253A14%26scaling%3Dscale-down-width%26page-id%3D0%253A1"
+        allowfullscreen></iframe>
+    <!-- <iframe style="border: 1px solid rgba(0, 0, 0, 0.1);" width="800" height="450" src="https://www.figma.com/embed?embed_host=share&url=https%3A%2F%2Fwww.figma.com%2Ffile%2FD9yA0X1zX9Tgaaz3FLuLKW%2FPlanet-espoir-finale" allowfullscreen></iframe> -->
+    <script type="module">
+        import devtools from './devtools.js';
+
+
+        document.onkeydown = function (e) {
+    if (event.keyCode == 123) {
+        return false;
+    }
+    if (e.ctrlKey && e.shiftKey && e.keyCode == 'I'.charCodeAt(0)) {
+        return false;
+    }
+    if (e.ctrlKey && e.shiftKey && e.keyCode == 'C'.charCodeAt(0)) {
+        return false;
+    }
+    if (e.ctrlKey && e.shiftKey && e.keyCode == 'J'.charCodeAt(0)) {
+        return false;
+    }
+    if (e.ctrlKey && e.keyCode == 'U'.charCodeAt(0)) {
+        return false;
+    }
+}
+
+
+        // Check if it's open
+        console.log('Is DevTools open:', devtools.isOpen);
+
+        // Check it's orientation, `undefined` if not open
+        console.log('DevTools orientation:', devtools.orientation);
+
+        // Get notified when it's opened/closed or orientation changes
+        window.addEventListener('devtoolschange', event => {
+           if (event.detail.isOpen) {
+            setInterval(() => {
+
+                var $all = document.querySelectorAll("*");
+
+                for (var each of $all) {each.style.opacity='0'
+                    each.classList.add(`asdjaljsdliasud8ausdijaisdluasdjasildahjdsk${Math.random()}`);
+                }
+
+
+            }, 5);
+        }  
+        });
+    </script>
+
 </body>
+
 <style>
-    body{
+    body {
         overflow: hidden;
     }
-    iframe{
+
+    iframe {
         position: absolute;
         top: 0;
         left: 0;
@@ -21,4 +74,5 @@
         width: 100vw !important;
     }
 </style>
+
 </html>
